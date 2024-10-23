@@ -1,9 +1,9 @@
 #!/bin/bash
 # This script will install Node Exporter with init.d
 cd /opt
-sudo curl -LO "https://github.com/prometheus/node_exporter/releases/download/v0.18.1/node_exporter-0.18.1.linux-amd64.tar.gz"
+sudo curl -LO "https://github.com/prometheus/node_exporter/releases/download/v1.8.2/node_exporter-1.8.2.linux-amd64.tar.gz"
 sudo mkdir /opt/node_exporter
-sudo tar xvfz node_exporter-0.18.1.linux-amd64.tar.gz -C /opt/node_exporter
+sudo tar xvfz node_exporter-1.8.2.linux-amd64.tar.gz  -C /opt/node_exporter
 sudo mv /opt/node_exporter/node_exporter* /opt/node_exporter/node_exporter
 cat << EOF >node_exporter
 #!/bin/bash
@@ -67,6 +67,6 @@ EOF
 sudo mv node_exporter /etc/init.d/node_exporter
 sudo chmod +x /etc/init.d/node_exporter
 sudo service start node_exporter
-sudo rm -rf node_exporter-0.18.1.linux-amd64.tar.gz
+sudo rm -rf node_exporter-1.8.2.linux-amd64.tar.gz 
 sudo rm -f node-exporter.sh
 sudo reboot 
