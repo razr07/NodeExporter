@@ -69,3 +69,4 @@ sudo chmod +x /etc/init.d/node_exporter
 sudo service start node_exporter
 sudo rm -rf node_exporter-0.18.1.linux-amd64.tar.gz
 sudo rm -f node-exporter.sh
+sudo reboot 
