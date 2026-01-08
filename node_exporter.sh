@@ -1,6 +1,6 @@
 #!/bin/bash
 # This script will install Node Exporter with systemd
-VERSION="1.3.1"
+VERSION="1.10.2"
 sudo curl -LO "https://github.com/prometheus/node_exporter/releases/download/v$VERSION/node_exporter-$VERSION.linux-amd64.tar.gz"
 sudo tar xvfz node_exporter-$VERSION.linux-amd64.tar.gz -C /opt/
 sudo mv /opt/node_exporter-$VERSION.linux-amd64 /opt/node_exporter
