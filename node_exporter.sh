@@ -15,7 +15,7 @@ ExecStart=/opt/node_exporter/node_exporter
 [Install]
 WantedBy=default.target
 EOF
-sudo mv node_exporter.service /etc/systemd/system/
+#sudo mv node_exporter.service /etc/systemd/system/
 sudo systemctl daemon-reload
 sudo systemctl enable node_exporter.service
 sudo systemctl start node_exporter.service
